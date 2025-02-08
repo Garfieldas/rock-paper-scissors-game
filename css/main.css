@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&family=Titan+One&display=swap');
+:root {
+    --header-color: #d64d00;
+    --text-color: #ffcccc;
+    --background-color: #5c94fc;
+    --score-color: #fafafa;
+    --weapon-color: #fc9839;
+    --weapon-text: #c84d0c;
+    --footer-color: #80d010;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--background-color);
+}
+
+.title {
+    font-family: "Pixelify Sans", serif;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    padding: 40px 0px;
+    background-color: var(--header-color);
+    color: var(--text-color);
+    font-size: 24px;
+}
+
+.main{
+    margin-top: 40px;
+    text-align: center;
+}
+
+.scoreboard{
+    color: var(--score-color);
+    margin-bottom: 40px;
+}
+
+.score-info{
+    font-size: 28px;
+    color: var(--score-color);
+    margin: 10px 0px;
+}
+
+.score-message{
+    font-size: 28px;
+}
+
+.score-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 400px;
+    margin: auto;
+    padding: 10px;
+    color: var(--score-color);
+    font-weight: bold;
+}
+
+.score-box {
+    width: 170px;
+}
+
+.sign {
+    font-size: 50px;
+}
+.score {
+    font-size: 28px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weapon {
+    width: 100px;
+    height: 100px;
+}
+
+.btn {
+    border-radius: 10px;
+    background-color: var(--weapon-color);
+    color: var(--weapon-text);
+}
+
+.footer{
+    font-family: "Press Start 2P", serif;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    color: var(--score-color);
+    font-size: 15px;
+    background-color: var(--footer-color);
+
+}
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: var(--weapon-color);
+    text-align: center;
+    font-size: 30px;
+    user-select: none;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;  
+}
+
+.modal-title{
+    font-weight: bold;
+    font-family: "Pixelify Sans", serif;
+    font-size: 36px;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.6;
+}
+
+.overlay.active {
+    display: block;
+}
+
+.btn.restart {
+    padding: 10px 20px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 25px;
+    background-color: var(--header-color);
+    color: var(--text-color);
+    font-family: "Pixelify Sans", serif;
+
+}
