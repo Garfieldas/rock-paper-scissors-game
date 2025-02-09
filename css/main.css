@@ -163,3 +163,9 @@ body{
     font-family: "Pixelify Sans", serif;
 
 }
+
+@media only screen and (max-width: 600px){
+    .title {
+        font-size: 35px;
+    }
+}
