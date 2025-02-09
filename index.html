@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="css/icon.png">
 </head>
 <body>
     <header class="header">
@@ -47,6 +48,12 @@
         <button class="btn restart" id="restartBtn">Play again</button>
     </div>
     <div class="overlay" id="overlay"></div>
+    <audio autoplay id="myAudio">
+        <source src="music/theme.mp3" type="audio/mp3">
+    </audio>
+    <audio autoplay id="choiceSound">
+        <source src="music/choice.mp3" type="audio/mp3">
+    </audio>
 <script src="js/main.js"></script>
 </body>
 </html>

@@ -17,12 +17,17 @@ const overlay = document.querySelector('#overlay');
 const result = document.querySelector('#result');
 const restartBtn = document.querySelector('#restartBtn');
 
+const audio = document.querySelector('#myAudio');
+const choiceSound = document.querySelector('#choiceSound');
+
 let playerScore = 0;
 let computerScore = 0;
 
 
 let handleClick = (playerOption) => {
     let playerChoice = playerOption;
+    choiceSound.play();
+    choiceSound.currentTime = 0;
     if (playerChoice == 'rock'){
         playerSign.textContent = rockBtn.textContent;
     }
@@ -102,16 +107,25 @@ let playRound = (playerChoice, computerChoice) => {
 
 let playGame = (playerChoice, computerChoice) => {
     playRound(handleClick(playerChoice), computerChoice);
+    audio.play();
 
     if (playerScore === 5) {
         endGameScreen.classList.add("active");
         overlay.classList.add("active");
         result.textContent = 'You won!';
+        audio.pause();
+        audio.currentTime = 0;
+        choiceSound.src = 'music/victory.mp3';
+        choiceSound.play();
     } 
     else if (computerScore === 5) {
         endGameScreen.classList.add("active");
         overlay.classList.add("active");
         result.textContent = 'You lost...';
+        audio.pause();
+        audio.currentTime = 0;
+        choiceSound.src = 'music/defeat.mp3';
+        choiceSound.play();
     }
 };
 
@@ -125,6 +139,8 @@ let restartGame = () => {
     computerSign.textContent = '?';
     scoreInfo.textContent = 'Choose your weapon';
     scoreMessage.textContent = 'First one to score 5 wins the game';
+    audio.play();
+    choiceSound.src = 'music/choice.mp3';
 
 }
 
