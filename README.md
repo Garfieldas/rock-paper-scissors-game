@@ -7,6 +7,7 @@ This project was created in order to practise dom manipulation using vannila jav
 
 
 ## Features
+![App Preview](https://i.ibb.co/0jSWHbg5/Screenshot-2025-02-10-at-23-03-52.png)
 
 This game includes:
 
